@@ -1,11 +1,11 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3FuZ3V5ZW4iLCJhIjoiY2w5eXd1YXc0MDk3MjNucDg2cDhyN3JrbyJ9.aMzoD2AZBPUtaVP2yV5N-A'
 const map = new mapboxgl.Map({
-container: 'map', // container ID
+container: 'map',
 style: 'mapbox://styles/mapbox/satellite-v9', 
-center: [-103.2502, 29.2498],
-zoom: 9, // starting zoom
-pitch: 85,
-bearing: 80, 
+center: [-103.3, 29.3],
+zoom: 9.3,
+pitch: 80,
+bearing: 90, 
 projection: 'globe',
 });
 
@@ -51,7 +51,7 @@ map.on('load', () => {
 
         new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML( '<center><strong>' + e.features[0].properties.TRLNAME + '</strong>' + '<br>' + e.features[0].properties.TRLCLASS + '<br>' + e.features[0].properties.Miles + ' miles </center>')
+        .setHTML( '<center><strong>Trail name: </strong>' + e.features[0].properties.TRLNAME + '<br><strong>Trail class: </strong>' + e.features[0].properties.TRLCLASS + '<br><strong>Trail miles: </strong>' + e.features[0].properties.Miles + ' miles </center>')
         .addTo(map);
         });
          
@@ -76,7 +76,7 @@ map.on('load', function () {
         'tileSize': 512,
         'maxzoom': 14
     });
-     map.setTerrain({"source": "mapbox-dem", "exaggeration": 1.6});
+     map.setTerrain({"source": "mapbox-dem", "exaggeration": 1.3});
      
      map.setFog({
         'range': [-1, 2],
