@@ -1,7 +1,7 @@
 #map {
-   width: auto;
-   height: 98vh;
-}
+    width: auto;
+    height: 98vh;
+    }
 
 .mapboxgl-popup {
     min-width: 350px;
@@ -14,7 +14,7 @@ h1 {
     font-size: 3em;
     font-weight: bold;
     text-align: center;
-}
+    }
 
 h2 {
     font-family: "Helvetica Neue";
@@ -22,7 +22,7 @@ h2 {
     font-size: 1.5em;
     font-weight: lighter;
     text-align: center;
-}
+    }
 
 p3 {
 	font-family: "Helvetica Neue";
@@ -30,7 +30,7 @@ p3 {
 	font-size: 1em;
 	font-style: italic;
 	text-align: center;
-}
+    }
 
 #legend {
     background-color: #ffffff;
