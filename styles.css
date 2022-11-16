@@ -4,9 +4,33 @@
 }
 
 .mapboxgl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    min-width: 350px;
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     }
+    
+h1 {
+    font-family: "Helvetica Neue";
+    color: black;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Helvetica Neue";
+    color: #515151;
+    font-size: 1.5em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+p3 {
+	font-family: "Helvetica Neue";
+	color: grey;
+	font-size: 1em;
+	font-style: italic;
+	text-align: center;
+}
 
 #legend {
     background-color: #ffffff;
