@@ -60,7 +60,21 @@ map.on('load', () => {
          
         map.on('mouseleave', 'trails-layer', () => {
         map.getCanvas().style.cursor = '';
+    });
+        
+    map.on('click', 'trails-layer', (e) => {
+        map.flyTo({
+        center: e.lngLat
         });
+        });
+         
+        map.on('mouseenter', 'trails-layer', () => {
+        map.getCanvas().style.cursor = 'pointer';
+        });
+         
+        map.on('mouseleave', 'trails-layer', () => {
+        map.getCanvas().style.cursor = '';
+    });
 
 });
 
@@ -81,21 +95,6 @@ map.on('load', function () {
         'space-color': '#d8f2ff',
         'star-intensity': 0.0
     });
-
-    map.on('click', 'trails-layer', (e) => {
-        map.flyTo({
-        center: e.lngLat
-        });
-        });
-         
-        map.on('mouseenter', 'trails-layer', () => {
-        map.getCanvas().style.cursor = 'pointer';
-        });
-         
-        map.on('mouseleave', 'trails-layer', () => {
-        map.getCanvas().style.cursor = '';
-        });
-
 });
 
 const navControl = new mapboxgl.NavigationControl({
