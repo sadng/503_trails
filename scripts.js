@@ -1,12 +1,12 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3FuZ3V5ZW4iLCJhIjoiY2w5eXd1YXc0MDk3MjNucDg2cDhyN3JrbyJ9.aMzoD2AZBPUtaVP2yV5N-A'
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/satellite-v9', 
-center: [-103.3, 29.3],
-zoom: 9.3,
-pitch: 80,
-bearing: 90, 
-projection: 'globe',
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-v9', 
+        center: [-103.3, 29.3],
+        zoom: 9.3,
+        pitch: 80,
+        bearing: 90, 
+        projection: 'globe',
 });
 
 map.on('load', () => {
@@ -25,8 +25,7 @@ map.on('load', () => {
           'line-color': ['match', ['get', 'TRLCLASS'],
           'Class 1: Minimally Developed', 'red',
           'Class 2: Moderately Developed', 'orange',
-          'Class 3: Developed', 'yellow',
-          /*else,*/ 'blue'
+          'Class 3: Developed', 'yellow','blue'
       ]
       }
     });
@@ -55,14 +54,10 @@ map.on('load', () => {
         .addTo(map);
         });
          
-        // Change the cursor to a pointer when
-        // the mouse is over the states layer.
         map.on('mouseenter', 'trails-layer', () => {
         map.getCanvas().style.cursor = 'pointer';
         });
          
-        // Change the cursor back to a pointer
-        // when it leaves the states layer.
         map.on('mouseleave', 'trails-layer', () => {
         map.getCanvas().style.cursor = '';
         });
@@ -87,9 +82,9 @@ map.on('load', function () {
         'star-intensity': 0.0
     });
 
- });
+});
 
- const navControl = new mapboxgl.NavigationControl({
+const navControl = new mapboxgl.NavigationControl({
     visualizePitch: true
 });
 map.addControl(navControl, 'top-right');
