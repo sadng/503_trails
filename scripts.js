@@ -89,6 +89,7 @@ const navControl = new mapboxgl.NavigationControl({
 });
 map.addControl(navControl, 'top-right');
 
-map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('map')
-    })
-);
+const navExpand = new mapboxgl.FullscreenControl({
+    container: document.querySelector('map')
+});
+map.addControl(navExpand, 'top-right');
