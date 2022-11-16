@@ -29,7 +29,13 @@ p3 {
 	color: grey;
 	font-size: 1em;
 	font-style: italic;
-	text-align: center;
+    }
+
+a {
+	font-family: "Helvetica Neue";
+	color: grey;
+	font-size: 1em;
+	font-style: italic;
     }
 
 #legend {
