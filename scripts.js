@@ -82,6 +82,20 @@ map.on('load', function () {
         'star-intensity': 0.0
     });
 
+    map.on('click', 'trails-layer', (e) => {
+        map.flyTo({
+        center: e.lngLat
+        });
+        });
+         
+        map.on('mouseenter', 'trails-layer', () => {
+        map.getCanvas().style.cursor = 'pointer';
+        });
+         
+        map.on('mouseleave', 'trails-layer', () => {
+        map.getCanvas().style.cursor = '';
+        });
+
 });
 
 const navControl = new mapboxgl.NavigationControl({
